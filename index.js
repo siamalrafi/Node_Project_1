@@ -2,7 +2,7 @@
  * Title: Basic Node app example
  * Description: Simple node application that print random quotes per second interval.
  * Author: Siam Al Rafi
- */
+*/
 
 
 // Dependencies
@@ -32,18 +32,14 @@ app.printAQuote = function printAQuote() {
     // Print the quote to the console
     console.log(selectedQuote);
 
+};
 
+// Function that loops indefinitely, calling the printAQuote function as it goes
+app.indefiniteLoop = function indefiniteLoop() {
+    // Create the interval, using the config variable defined above
+    setInterval(app.printAQuote, app.config.timeBetweenQuotes);
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
+// Invoke the loop
+app.indefiniteLoop();
 
