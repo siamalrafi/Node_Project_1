@@ -30,7 +30,7 @@ app.printAQuote = function printAQuote() {
     const selectedQuote = allQuotes[randomNumber - 1];
 
     // Print the quote to the console
-    console.log(selectedQuote);
+    console.log(selectedQuote + '\n');
 
 };
 
