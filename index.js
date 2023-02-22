@@ -1,1 +1,49 @@
-console.log('object');
+/*
+ * Title: Basic Node app example
+ * Description: Simple node application that print random quotes per second interval.
+ * Author: Siam Al Rafi
+ */
+
+
+// Dependencies
+const mathLibrary = require('./lib/math');
+const quotesLibrary = require('./lib/quotes');
+
+// App object - Module scaffolding
+const app = {};
+
+// Configuration
+app.config = {
+    timeBetweenQuotes: 1000,
+};
+
+app.printAQuote = function printAQuote() {
+    // Get all the quotes
+    const allQuotes = quotesLibrary.allQuotes();
+
+    const numberOfQuotes = allQuotes.length;
+
+    // Pick a random number between 1 and the number of quotes
+    const randomNumber = mathLibrary.getRandomNumber(1, numberOfQuotes);
+
+    // Get the quote at that position in the array (minus one)
+    const selectedQuote = allQuotes[randomNumber - 1];
+
+    // Print the quote to the console
+    console.log(selectedQuote);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
